@@ -1,7 +1,9 @@
 import { Router } from 'express';
 
+import User from './app/controllers/UserController';
+
 const routes = new Router();
 
-routes.get('/', (req, res) => res.json({ message: 'Welcome to Omni CLI' }));
+routes.post('/users', User.store);
 
 export default routes;
